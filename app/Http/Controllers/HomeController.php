@@ -11,8 +11,6 @@ class HomeController extends Controller
         
         $posts = Post::all();
 
-        return view('home', [
-            'posts' => $posts,
-        ]);
+        return view('home', compact('posts'));
     }
 }
