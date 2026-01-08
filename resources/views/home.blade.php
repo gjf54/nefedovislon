@@ -36,8 +36,10 @@
     @endif
     <h3>HOME</h3>
     <hr/>
-    @foreach ($posts as $post)
-        <p>{{ $post->title }}</p>
-    @endforeach
+    @if ($posts->first())
+        @foreach ($posts as $post)
+            <p>{{ $post->title }}</p>
+        @endforeach
+    @endif
 </body>
 </html>
