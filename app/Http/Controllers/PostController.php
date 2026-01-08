@@ -13,7 +13,7 @@ class PostController extends Controller
     {   
         $posts = Post::all();
 
-        return view('home', compact('posts'));
+        return view('posts', compact('posts'));
     }
 
     public function show(string $id)
