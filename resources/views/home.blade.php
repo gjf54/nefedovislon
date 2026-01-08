@@ -9,6 +9,6 @@
 <body>
     <h3>HOME</h3>
     <hr/>
-    <a href="/posts">Posts</a>
+    <a href="{{ route('posts') }}">Posts</a>
 </body>
 </html>
