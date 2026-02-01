@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 /**
@@ -18,8 +20,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => Str::random(10),
+            'title' => Str::random(10), // jkF5ifhhhh
             'body' => Str::random(400),
+            'category_id' => Category::all()->first()->id,
         ];
     }
 }

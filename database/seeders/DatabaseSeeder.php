@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,9 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Post::create([
-           'title' => 'Afansev gad',
-           'body' => 'Hello world!',
+        Category::create([
+            'name' => 'AAAAAAAAAA',
         ]);
 
         Post::factory(10)->create();
