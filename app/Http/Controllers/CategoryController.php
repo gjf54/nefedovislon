@@ -26,11 +26,13 @@ class CategoryController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Вот здесь обработка запроса на сохранение.
+     * Рекомендуется создать специальные форм-реквесты для четкой структуры.
+     * Подрбнее в документации..
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
