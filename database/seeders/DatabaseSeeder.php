@@ -17,9 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
-            'name' => 'AAAAAAAAAA',
-        ]);
+        Category::factory(1)->create();
 
         Post::factory(10)->create();
     }

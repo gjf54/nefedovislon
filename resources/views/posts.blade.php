@@ -40,6 +40,7 @@
         @foreach ($posts as $post)
             <div style="display: flex; flex-direction: column; gap: 0px; padding: 20px 0px;">
                 <p>{{ $post->title }}</p>
+                <p>Category: {{ $post->category->name }}</p>
                 <a href="{{ route('posts.show', ['id' => $post->id]) }}">View</a>
             </div>
         @endforeach

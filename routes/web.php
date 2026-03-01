@@ -12,6 +12,9 @@ Route::get('/', function () {
 Route::get('/categories', [CategoryController::class, 'index'])
     ->name('categories');
 
+Route::get('/categories/{id}/posts', [CategoryController::class, 'show'])
+    ->name('categories.posts');
+
 Route::get('/posts', [PostController::class, 'index'])
     ->name('posts');
 

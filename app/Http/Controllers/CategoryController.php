@@ -38,7 +38,15 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $category = Category::with('posts')->find($id);
+
+        if (!$category) return abort(404);
+
+        $posts = $category->posts;
+
+        return view('posts', [
+            'posts' => $posts,
+        ]);
     }
 
     /**
